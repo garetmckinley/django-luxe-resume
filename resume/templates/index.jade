@@ -1,6 +1,8 @@
 //- Create a clickable hashtag
 mixin hashtag(tag)
-  a(class='hashtag', href='#'+tag, onClick='highlight("'+tag+'")')= tag
+  a(class='hashtag', href='#'+tag, onClick='highlight("'+tag+'")')
+    span #
+    span= tag
 
 //- Create a hashtag skill
 mixin skill(name)
@@ -16,7 +18,7 @@ html(lang="en")
     title= pageTitle
     link(rel='stylesheet', href='{{STATIC_URL}}resume/css/styles.css')
     link(rel='stylesheet', href='{{STATIC_URL}}resume/css/animate.css')
-    script(src='{{STATIC_URL}}resume/js/jquery.js')
+    script(src='{{STATIC_URL}}resume/js/jquery-1.11.1.min.js')
     script(src='{{STATIC_URL}}resume/js/functions.js')
 
   body
