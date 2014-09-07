@@ -1,0 +1,159 @@
+//- Create a clickable hashtag
+mixin hashtag(tag)
+  a(class='hashtag', href='#'+tag, onClick='highlight("'+tag+'")')= tag
+
+//- Create a hashtag skill
+mixin skill(name)
+  li
+    +hashtag(name)
+
+mixin anchor(text)
+  a(href=text, id=text)= text
+
+!!!
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='{{STATIC_URL}}resume/css/styles.css')
+    link(rel='stylesheet', href='{{STATIC_URL}}resume/css/animate.css')
+    script(src='{{STATIC_URL}}resume/js/jquery.js')
+    script(src='{{STATIC_URL}}resume/js/functions.js')
+
+  body
+    div.infobar
+    div.page
+      div.content
+        h1 Garet McKinley
+        span Full stack web developer. I write code to do cool things.
+
+        h2 #About
+        p
+          | Hello, I'm Garet McKinley. I'm a Maryland based full stack web developer
+          | actively seeking employment in the San Franscisco area.
+          | You can click on any of the hashtags on this page to highlight all of the
+          | occurrences. This should hopefully make it easier for you to quickly seeking
+          | all the professional experience I have using that skill.
+        h2 #Skills
+        h4 All the technologies I'm comfortable working with, ordered from strongest to weakest.
+        div.third
+          ul
+            +skill('PHP')
+            +skill('JavaScript')
+            +skill('HTML')
+            +skill('CSS')
+            +skill('MySQL')
+            +skill('LAMP')
+            +skill('jQuery')
+            +skill('SASS')
+            +skill('Susy')
+
+        div.third
+          ul
+            +skill('LESS')
+            +skill('WordPress')
+            +skill('Git')
+            +skill('Grunt')
+            +skill('AJAX')
+            +skill('Jade')
+            +skill('Python')
+            +skill('PostgreSQL')
+            +skill('Photoshop')
+
+
+        div.thirdOmega
+          ul
+            +skill('Lua')
+            +skill('CoronaSDK')
+            +skill('Unity')
+            +skill('Xcode')
+            +skill('Java')
+            +skill('Objective-C')
+            +skill('PHPDoc')
+            +skill('NodeJS')
+
+        h2 #Standards
+        p
+          | I write all my code in compliance with the popular
+          a(href='http://www.gnu.org/prep/standards/standards.html') GNU standards
+          | , with appropriate modification for
+          | the best practices in the language I'm developing in.
+          | I believe that this is an important thing to mention, as I think code should not only be functional,
+          | it should also easy to read and extend.
+
+        h2 #Experience
+        h3 Red 3 Media, Inc.
+        h4.date Full Stack Web Developer - 2013-Current
+        p
+          | I helped develop and maintain a large scale news and data archiving platform. The project involved the development of
+          | a news and data entry administration panel complete with subscription management, account management,
+          | and employee management. It also involved developing a portal where subscribers could log in, read
+          | daily news, and view charts on the finiancial industry. I got to work with several high profile
+          | financial companies such as Visa and Discover, helping them to incorperate the API I built into their own
+          | news portals.
+        span
+          | Technologies used:
+        ul.inline
+          +skill('WordPress')
+          +skill('PHP')
+          +skill('HTML')
+          +skill('CSS')
+          +skill('LESS')
+          +skill('JavaScript')
+          +skill('jQuery')
+          +skill('AJAX')
+          +skill('MySQL')
+          +skill('LAMP')
+          +skill('Git')
+          +skill('Grunt')
+          +skill('Python')
+
+        h3 CardWeb.com
+        h4.date Software Engineer - 2009-2013
+        p
+          | I helped develop and maintain a large scale news and data archiving platform. The project involved the development of
+          | a news and data entry administration panel complete with subscription management, account management,
+          | and employee management. It also involved developing a portal where subscribers could log in, read
+          | daily news, and view charts on the finiancial industry. I got to work with several high profile
+          | financial companies such as Visa and Discover, helping them to incorperate the API I built into their own
+          | news portals.
+        span
+          | Technologies used:
+        ul.inline
+          +skill('PHP')
+          +skill('HTML')
+          +skill('CSS')
+          +skill('JavaScript')
+          +skill('jQuery')
+          +skill('AJAX')
+          +skill('PostgreSQL')
+          +skill('LAMP')
+          +skill('Git')
+
+        h2 #Projects
+        h3 MultiRezer
+        h4.date Project Manager / Lead Developer - 2012
+        p
+          | MultiRezer is a graphic processing utility I developed to speed up the development
+          | of cross-platform mobile apps by automating the rescaling of the graphics. It's an
+          | OSX app written in Objective-C using Xcode as the IDE. It's currently available for
+          | purchase in the Mac App Store.
+        span
+          | Technologies used:
+        ul.inline
+          +skill('Xcode')
+          +skill('Objective-C')
+          +skill('Photoshop')
+          +skill('Git')
+
+
+
+        h2 #Contact
+        h4 I'm currently available for employment!
+        form
+          div.half
+            input(placeholder='Name')
+          div.halfOmega
+            input(placeholder='Email')
+          textarea(placeholder='Message')
+        div.bubbleBelow(class='animated')
+          p(class='bubble')
