@@ -12,5 +12,8 @@
 - Make the contact form more dynamic (possibly add the ability to change the contact for to a "request a quote" for freelancers.
 - Probably add some more shit in the future.
 
+## License
+Django Luxe Resume is licensed under the BSD License.
+
 ## Credits
 Currently built and maintained by only myself ((Garet McKinley)[http://igaret.com] - [@iGARET on GitHub and twitter])
